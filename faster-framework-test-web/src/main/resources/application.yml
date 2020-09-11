@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: faster-api
+  profiles:
+    include:
+      - web
+      - mybatis
+  datasource:
+    druid:
+      url: jdbc:mysql://139.199.23.31:3306/faster-admin?allowMultiQueries=true&useSSL=true
+      username: root
+      password: 18764050615

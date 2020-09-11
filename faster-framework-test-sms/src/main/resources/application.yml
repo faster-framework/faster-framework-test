@@ -1,0 +1,11 @@
+spring:
+  profiles:
+    include:
+    - web
+    - sms
+    active: dev
+app:
+  sms:
+    ali:
+      access-key-id: 111
+      access-key-secret: 222

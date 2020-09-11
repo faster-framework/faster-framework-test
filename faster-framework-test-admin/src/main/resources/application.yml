@@ -1,0 +1,22 @@
+spring:
+  profiles:
+    include:
+    - web
+    - mybatis
+app:
+  upload:
+    local:
+      file-dir: /Users/zhangbowen/data/upload
+      url-prefix: http://127.0.0.1:8080
+  datasource:
+    host: 139.199.23.31
+    port: 3306
+    username: root
+    password: 18764050615
+    name: faster-admin
+  shiro:
+    filter-chain-definition-map:
+      "[/admin/login]": anon
+      "[/admin/media/**]": anon
+      "[/admin/captcha/**]": anon
+      "[/admin/**]": jwt

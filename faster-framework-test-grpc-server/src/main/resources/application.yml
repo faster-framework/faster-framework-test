@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: faster-api
+  profiles:
+    include:
+    - web
+server:
+  port: 8081
+app:
+  grpc:
+    server:
+      port: 50051

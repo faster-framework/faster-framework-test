@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: faster-api
+  profiles:
+    include:
+    - web
+server:
+  port: 8080
+app:
+  grpc:
+    enabled: true
+    client:
+      enabled: true
+      services:
+        test-unary:
+          host: localhost
+        test-server-stream:
+          host: localhost
+        test-client-stream:
+          host: localhost
+        test-bidi-stream:
+          host: localhost
+    server:
+      enabled: true
+      port: 50050
+

@@ -1,0 +1,17 @@
+spring:
+  profiles:
+    include:
+    - web
+    - kafka
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: faster-test-kafka
+app:
+  kafka:
+    error:
+      enabled: true
+      dead-letter: true
+    producer:
+      reply: true
+      reply-topic: reply-test
